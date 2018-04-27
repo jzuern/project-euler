@@ -27,7 +27,7 @@ def origin_in_triangle(p_x, p_y, p0_x, p0_y, p1_x, p1_y, p2_x, p2_y):
 
     print p0_x, p0_y, p1_x, p1_y, p2_x, p2_y
 
-    A = 1/2 * (-p1_y * p2_x + p0_y * (-p1_x + p2_x) + p0_x * (p1_y - p2_y) + p1_x * p2_y)
+    A = 1.0/2 * (-p1_y * p2_x + p0_y * (-p1_x + p2_x) + p0_x * (p1_y - p2_y) + p1_x * p2_y)
 
     sign = 0
     if A < 0:
@@ -57,7 +57,7 @@ def origin_in_triangle(p_x, p_y, p0_x, p0_y, p1_x, p1_y, p2_x, p2_y):
 
 
 counter = 0
-for i in range(0,10):
+for i in range(0,1000):
 	is_in_triangle = origin_in_triangle(0,0,
 						p_0_xs[i],p_0_ys[i],
 						p_1_xs[i],p_1_ys[i],
